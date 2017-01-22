@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Final Goal</h1>
+
+    <% @products.each do |product| %>
+      <div class="final-gole-index">
+        <div class="final-gole-index-title">
+          <strong>Title</strong>
+          <%= product.title %>
+        </div>
+        <div class="final-gole-index-content">
+          <strong>Comment</strong>
+          <%= product.content %>
+        </div>
+        <div class="final-gole-index-image">
+          <%= image_tag product.image.to_s %>
+        </div>
+        
+        <div class="final-gole-index-button">
+          <button type="button" class="btn btn-warning"><%= link_to 'Show', product %></button>
+          <button type="button" class="btn btn-success"><%= link_to 'Edit', edit_product_path(product) %></button>
+          <button type="button" class="btn btn-danger"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        </div>
+      </div>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Goal', new_product_path %>

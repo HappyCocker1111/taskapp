@@ -11,7 +11,7 @@
     <li>
         <%= form_for [@project, @project.tasks.build] do |f| %>
         <%= f.text_field :title %>
-        <%= f.submit %>
+        <button type="button" class="btn btn-default"><%= f.submit %></button>
         <% end %>
     </li>
 </ul>

@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  
+
   root 'projects#index'
+  resources :products
   resources :diaries
   resources :projects do
     resources :tasks,only: [:create, :destroy]
   end
+  
+  resources :calendar, only: [:index]
+
   
   post 'projects/:product_id/tasks/:id/toggle' => 'tasks#toggle'
   # The priority is based upon order of creation: first created -> highest priority.

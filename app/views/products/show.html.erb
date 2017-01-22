@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @product.content %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <% if @product.image? %>
+  <div class="thumbnail">
+    <%= image_tag @product.image.url %>
+  </div>
+  <% end %>
+</p>
+
+<button type="button" class="btn btn-success"><%= link_to 'Edit', edit_product_path(@product) %></button>
+<button type="button" class="btn btn-primary"><%= link_to 'Back', products_path %></button>

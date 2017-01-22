@@ -13,5 +13,5 @@
   <%= @diary.content %>
 </p>
 
-<%= link_to 'Edit', edit_diary_path(@diary) %> |
-<%= link_to 'Back', diaries_path %>
+<button type="button" class="btn btn-success"><%= link_to 'Edit', edit_diary_path(@diary) %></button>
+<button type="button" class="btn btn-primary"><%= link_to 'Back', diaries_path %></button>
