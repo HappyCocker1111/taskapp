@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
 
-  root 'projects#index'
+  get 'users/show'
+
+  get 'users/new'
+
+  root 'welcome#index'
+  get 'welcome/index'
+  
   resources :products
   resources :diaries
   resources :projects do
     resources :tasks,only: [:create, :destroy]
   end
   
-  resources :calendar, only: [:index]
 
   
   post 'projects/:product_id/tasks/:id/toggle' => 'tasks#toggle'
