@@ -1,14 +1,10 @@
 Rails.application.routes.draw do
-
-  get 'users/show'
-
-  get 'users/new'
-
   root 'welcome#index'
   get 'welcome/index'
   
   resources :products
   resources :diaries
+  resources :users
   resources :projects do
     resources :tasks,only: [:create, :destroy]
   end
