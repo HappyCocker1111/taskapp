@@ -20,7 +20,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Project</a>
+        <a class="nav-link" href="/projects">Project</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/diaries">Diaries</a>
@@ -28,7 +28,11 @@
       <li class="nav-item active">
         <a class="nav-link" href="/products">Final Goal</a>
       </li>
-
+      <% if logged_in? %>
+        <li class="nav-item active"><a class="nav-link" href="/logout" data-method="delete">Log out</a></li>
+        <% else %>
+        <li class="nav-item active"><a class="nav-link" href="/login">Log in</a></li>
+        <% end %>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
