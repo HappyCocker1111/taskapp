@@ -1,5 +1,5 @@
 <%= form_for @project do |f| %>
-    <p>
+    <p class="project-new-p">
         <%= f.label :title %><br>
         <%= f.text_field :title %>
             <% if @project.errors.any? %>
@@ -7,5 +7,5 @@
             <% end %>
     </p>
     
-    <p><%= f.submit %></p>
+    <p><%= f.submit :class=>"project-new-btn"%></p>
 <% end %>

@@ -15,23 +15,24 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="/">Home</a>
+  <div class="home"><%= link_to "Home", root_path %></div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/projects">Project</a>
+      <li class="nav-item-active">
+        <%= link_to "Project", projects_path %>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/diaries">Diaries</a>
+      <li class="nav-item-active">
+        <%= link_to"Diaries", diaries_path %>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/products">Final Goal</a>
+      <li class="nav-item-active">
+        <%= link_to"Final Goal", products_path %>
       </li>
       <% if logged_in? %>
-        <li class="nav-item active"><a class="nav-link" href="/logout" data-method="delete">Log out</a></li>
+        <li class="nav-item-active"><%= link_to "Log out", logout_path, method: "delete" %></li>
+        <li class="nav-item-active"><%= link_to"Profil", current_user %></li>
         <% else %>
-        <li class="nav-item active"><a class="nav-link" href="/login">Log in</a></li>
+        <li class="nav-item-active"><%= link_to"Log in", login_path %></li>
         <% end %>
     </ul>
     <form class="form-inline my-2 my-lg-0">

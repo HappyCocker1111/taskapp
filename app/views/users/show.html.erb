@@ -1,1 +1,16 @@
-<%= @user.name %><%= @user.email %>
+<h1 class="user-show-h">登録内容</h1>
+<table class="user-show">
+    <tbody>
+        <tr>
+            <th class="arrow_box">Name</div></th>
+            <td><%= @user.name %></td>
+        </tr>
+        <tr>
+            <th class="arrow_box">email</th>
+            <td><%= @user.email%></td>
+        </tr>
+    </tbody>
+</table>
+<p class="user-show-b">
+<button type="button" class="btn btn-warning"><%= link_to "編集", edit_user_path(current_user)%></button>
+</p>
