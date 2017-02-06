@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post '/login', to:'sessions#create'
   delete '/logout', to:'sessions#destroy'
   
+  post '/projects/:project_id/tasks/:id/toggle' => 'tasks#toggle'
+  
   resources :products
   resources :diaries
   resources :users
@@ -15,8 +17,7 @@ Rails.application.routes.draw do
   end
   
 
-  
-  post '/projects/:product_id/tasks/:id/toggle' => 'tasks#toggle'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
