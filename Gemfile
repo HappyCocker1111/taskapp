@@ -27,6 +27,7 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'carrierwave'
+gem 'cloudinary'
 gem 'bcrypt'
 
 # Use ActiveModel has_secure_password
