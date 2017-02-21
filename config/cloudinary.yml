@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hrjprshnu
+  api_key: '111128843742345'
+  api_secret: 5KSUOlwd0uL_H54ACLoqYs7jQGg
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hrjprshnu
+  api_key: '111128843742345'
+  api_secret: 5KSUOlwd0uL_H54ACLoqYs7jQGg
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hrjprshnu
+  api_key: '111128843742345'
+  api_secret: 5KSUOlwd0uL_H54ACLoqYs7jQGg
+  enhance_image_tag: true
+  static_image_support: false
